@@ -1,7 +1,25 @@
 # PyTest API testing with Request HTTP lib and Pydantic validation
 
 # Information about this test
-The purpose of this test is validating of the JSON schema in accordance with the basic pydantic model  
+The purpose of this test is validating of the JSON schema in accordance with the basic pydantic model
+Basemodel example
+
+```python
+from pydantic import BaseModel, validator, Field, ValidationError, HttpUrl
+from datetime import datetime, date
+from src.enums.global_enums import Team
+
+class PaprikaTags(BaseModel):
+    id: str
+    name: str
+    coin_counter: int
+    ico_counter: int
+
+class PaprikaTeam(BaseModel):
+    id: str = Field(min_length=1, description="id lenght should not be 0")
+    name: str = Field(max_length=255, description="Name should be less than 255 symbols")
+    position: Team = Field(description="Team members took from Enum list")
+```
 
 ## Installation
   
