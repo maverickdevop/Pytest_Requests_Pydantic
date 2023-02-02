@@ -1,7 +1,7 @@
 # PyTest API testing with Request HTTP lib and Pydantic validation
 
 # Information about this test
-## The purpose of this test is validating of the JSON schema in accordance with the basic pydantic model  
+The purpose of this test is validating of the JSON schema in accordance with the basic pydantic model  
 
 ## Installation
   
