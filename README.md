@@ -5,7 +5,13 @@ The purpose of this test is validating of the JSON schema in accordance with the
 Basemodel example
 
 ```python
-from pydantic import BaseModel, validator, Field, ValidationError, HttpUrl
+from enum import Enum
+class Team(Enum):
+    FOUNDER = "Founder"
+    DEV = "Blockchain Developer"
+    NODE_DEV = "Node js Developer"
+
+from pydantic import BaseModel, validator, Field, ValidationError
 from datetime import datetime, date
 from src.enums.global_enums import Team
 
