@@ -11,4 +11,4 @@ RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 
 # Run tests
-CMD python3 -m pytest -sv --tb=short /tests/base_test.py
+CMD python3 -m pytest -sv --tb=short tests/coinpaprika_test.py
